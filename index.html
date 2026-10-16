@@ -503,12 +503,21 @@
       color: var(--muted);
     }
 
+    .project-summary {
+      max-width: 790px;
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .project-summary + .project-summary { margin-top: 18px; }
+
     .product-card {
       display: grid;
       grid-template-columns: minmax(0, 1fr) auto;
       gap: 44px;
       align-items: end;
-      margin-top: 18px;
+      margin-top: 42px;
       padding: clamp(28px, 5vw, 58px);
       border: 1px solid var(--line);
       background: var(--surface);
@@ -786,9 +795,11 @@
 
     <section class="section" id="product" aria-labelledby="product-title">
       <div class="shell section-grid">
-        <p class="section-label"><span class="section-number">04</span> Current product</p>
+        <p class="section-label"><span class="section-number">04</span> Current project</p>
         <div>
-          <h2 id="product-title">Enoch is our current product.</h2>
+          <h2 id="product-title">We're currently working on Enoch.</h2>
+          <p class="project-summary">Enoch is a tamper-evident event logging and documentation archiving product. Customer events and documents stay private in customer-controlled systems, while cryptographic hashes and trusted timestamps are anchored to the Hedera public network. The result is private data with public proof: records whose integrity anyone can verify without ever seeing their contents.</p>
+          <p class="project-summary">Enoch serves regulated professional firms that depend on the integrity of their records, including law firms, medical practices, and accountants. It is built for organizations that must prove what happened and when, to auditors, regulators, and courts. Enoch is currently in development.</p>
           <article class="product-card">
             <div>
               <p class="product-kicker">In development</p>
