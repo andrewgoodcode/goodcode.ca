@@ -1,0 +1,16 @@
+# The Good Code Company
+
+> Independent software products, built to be trusted.
+
+The Good Code Company is a Toronto-based independent software product company.
+It designs, builds, owns, and operates its own products. It does not take
+client projects.
+
+## Products
+
+- Enoch (https://enoch.goodcode.ca/): tamper-evident records for regulated
+  enterprises. In development.
+
+## Contact
+
+- hello@goodcode.ca
