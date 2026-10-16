@@ -433,14 +433,16 @@
       color: var(--muted);
     }
 
-    .discipline-list {
+    .discipline-list,
+    .sector-list {
       margin: 46px 0 0;
       padding: 0;
       list-style: none;
       border-top: 1px solid var(--line-strong);
     }
 
-    .discipline-list li {
+    .discipline-list li,
+    .sector-list li {
       display: grid;
       grid-template-columns: 52px minmax(0, 1fr);
       gap: 18px;
@@ -453,7 +455,8 @@
       line-height: 1.15;
     }
 
-    .discipline-list span {
+    .discipline-list span,
+    .sector-list span {
       color: var(--warm);
       font-family: var(--sans);
       font-size: .76rem;
@@ -656,7 +659,8 @@
         border-right: 0;
         border-bottom: 1px solid var(--line);
       }
-      .discipline-list { margin-top: 34px; }
+      .discipline-list,
+      .sector-list { margin-top: 34px; }
       .faq-item { grid-template-columns: 1fr; gap: 10px; }
       .product-card { grid-template-columns: 1fr; gap: 34px; }
       .product-card .button { justify-self: start; }
@@ -701,6 +705,7 @@
       <div class="nav-links">
         <a class="nav-link" href="#company">Company</a>
         <a class="nav-link" href="#disciplines">Disciplines</a>
+        <a class="nav-link" href="#sectors">Sectors</a>
         <a class="nav-link" href="#product">Enoch</a>
         <a class="nav-link" href="#faq">Answers</a>
         <a class="button" href="mailto:hello@goodcode.ca">Contact <span class="arrow" aria-hidden="true">↗</span></a>
@@ -760,9 +765,28 @@
       </div>
     </section>
 
+    <section class="section" id="sectors" aria-labelledby="sectors-title">
+      <div class="shell section-grid">
+        <p class="section-label"><span class="section-number">03</span> Sectors</p>
+        <div>
+          <h2 id="sectors-title">The sectors where we focus our work.</h2>
+          <p class="lead">Our products are informed by work across seven business, technical, and institutional sectors.</p>
+          <ol class="sector-list" aria-label="Focus sectors">
+            <li><span>01</span> Finance &amp; Controlling</li>
+            <li><span>02</span> Procurement, Supply Chain &amp; Operations</li>
+            <li><span>03</span> Human Capital Management</li>
+            <li><span>04</span> Data Science &amp; Analytics</li>
+            <li><span>05</span> Artificial Intelligence &amp; Machine Learning</li>
+            <li><span>06</span> Process Automation</li>
+            <li><span>07</span> Governance, Legal &amp; Academia</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="product" aria-labelledby="product-title">
       <div class="shell section-grid">
-        <p class="section-label"><span class="section-number">03</span> Current product</p>
+        <p class="section-label"><span class="section-number">04</span> Current product</p>
         <div>
           <h2 id="product-title">Enoch is our current product.</h2>
           <article class="product-card">
@@ -779,7 +803,7 @@
 
     <section class="section" aria-labelledby="approach-title">
       <div class="shell section-grid">
-        <p class="section-label"><span class="section-number">04</span> How we work</p>
+        <p class="section-label"><span class="section-number">05</span> How we work</p>
         <div>
           <h2 id="approach-title">Direct ownership shapes the work.</h2>
           <div class="principles">
@@ -806,7 +830,7 @@
 
     <section class="section" aria-labelledby="about-title">
       <div class="shell section-grid">
-        <p class="section-label"><span class="section-number">05</span> Where we work</p>
+        <p class="section-label"><span class="section-number">06</span> Where we work</p>
         <div>
           <h2 id="about-title">Based in Toronto. Distributed worldwide.</h2>
           <p class="about-copy"><strong>The Good Code Company is based in Toronto, Ontario.</strong> Team members work from locations around the world. The company remains one product organization with direct responsibility for its software.</p>
@@ -816,7 +840,7 @@
 
     <section class="section" id="faq" aria-labelledby="faq-title">
       <div class="shell section-grid">
-        <p class="section-label"><span class="section-number">06</span> Direct answers</p>
+        <p class="section-label"><span class="section-number">07</span> Direct answers</p>
         <div>
           <h2 id="faq-title">Questions about the company.</h2>
           <div class="faq-list">
