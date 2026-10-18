@@ -924,7 +924,7 @@
         </div>
         <figure class="schem" style="margin:0">
           <div class="schem-frame">
-            <svg class="schem-svg" viewBox="0 -60 1400 890" role="img" aria-label="Schematic of the company operating model: a loop of eight stages, Research, Analyze, Plan, Design, Build, Test, Deploy, and Operate, drawn inside an Owned frame. An Optimize loop circles the Operate stage, a Revise loop spans Build and Test, a return trace carries operating data from Operate back to Research, and a separate Acquisition plate below the frame connects only occasionally.">
+            <svg class="schem-svg" viewBox="0 -60 1400 934" role="img" aria-label="Schematic of the company operating model: a loop of eight stages, Research, Analyze, Plan, Design, Build, Test, Deploy, and Operate, drawn inside an Owned frame. An Optimize loop circles the Operate stage, a Revise loop spans Build and Test, a return trace carries operating data from Operate back to Research, and a separate Acquisition plate below the frame connects only occasionally.">
               <defs>
                 <marker id="arr" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
                   <path class="arr-head" d="M0 0 L10 5 L0 10 z" />
@@ -934,7 +934,7 @@
                 </marker>
               </defs>
 
-              <rect class="frame-rect fade-in" style="--d:.05s" x="124" y="-36" width="1152" height="752" />
+              <rect class="frame-rect fade-in" style="--d:.05s" x="124" y="-36" width="1152" height="796" />
               <rect class="frame-label-bg fade-in" style="--d:.05s" x="622" y="-49" width="156" height="26" />
               <text class="frame-label fade-in" style="--d:.05s" x="700" y="-28">OWNED</text>
 
@@ -951,8 +951,8 @@
               <path class="trace trace-opt" style="--d:2.05s" pathLength="100" d="M352 272 A102 102 0 0 1 352 96" marker-end="url(#arr-accent)" />
               <text class="trace-label fade-in" style="--d:2.2s" transform="rotate(-90 263 184)" x="263" y="191">OPTIMIZE</text>
 
-              <path class="trace trace-revise" style="--d:2.25s" pathLength="100" d="M320 560 A420 420 0 0 1 780 600" marker-end="url(#arr-accent)" />
-              <text class="trace-label fade-in" style="--d:2.4s" x="550" y="695" text-anchor="middle">REVISE</text>
+              <path class="trace trace-revise" style="--d:2.25s" pathLength="100" d="M340 630 A350 350 0 0 1 760 650" marker-end="url(#arr-accent)" />
+              <text class="trace-label fade-in" style="--d:2.4s" x="550" y="740" text-anchor="middle">REVISE</text>
 
               <g class="node" style="--d:.35s" transform="translate(700 120)">
                 <circle r="76" />
@@ -995,19 +995,19 @@
                 <text class="node-name" y="26">OPERATE</text>
               </g>
 
-              <path class="acq-link fade-in" id="acq-link-path" style="--d:2.45s" d="M700 716 L700 756" />
+              <path class="acq-link fade-in" id="acq-link-path" style="--d:2.45s" d="M700 760 L700 800" />
               <g class="acq fade-in" id="acq-plate" style="--d:2.5s">
-                <rect x="550" y="758" width="300" height="64" rx="6" />
-                <text class="acq-name" x="700" y="797">ACQUISITION</text>
+                <rect x="550" y="802" width="300" height="64" rx="6" />
+                <text class="acq-name" x="700" y="841">ACQUISITION</text>
               </g>
 
               <path id="pulse-path" d="M700 120 L997 184 L1120 340 L997 496 L700 560 L403 496 L280 340 L403 184 C410 30 500 10 626 136" fill="none" stroke="none" />
               <path id="opt-path" d="M352 272 A102 102 0 0 1 352 96" fill="none" stroke="none" />
-              <path id="revise-path" d="M320 560 A420 420 0 0 1 780 600" fill="none" stroke="none" />
+              <path id="revise-path" d="M340 630 A350 350 0 0 1 760 650" fill="none" stroke="none" />
               <circle class="pulse" id="pulse-opt" r="7" cx="352" cy="272" />
-              <circle class="pulse" id="pulse-revise" r="7" cx="320" cy="560" />
+              <circle class="pulse" id="pulse-revise" r="7" cx="340" cy="630" />
               <circle class="pulse" id="pulse-main" r="9" cx="700" cy="120" />
-              <circle class="pulse" id="pulse-acq" r="7" cx="700" cy="716" />
+              <circle class="pulse" id="pulse-acq" r="7" cx="700" cy="760" />
             </svg>
           </div>
           <figcaption class="schem-caption">
@@ -1230,6 +1230,8 @@
     var optPath = document.getElementById('opt-path');
     var pulseMain = document.getElementById('pulse-main');
     var pulseOpt = document.getElementById('pulse-opt');
+    var revisePath = document.getElementById('revise-path');
+    var pulseRevise = document.getElementById('pulse-revise');
     var acq = document.getElementById('acq-plate');
     var acqLink = document.getElementById('acq-link-path');
     var pulseAcq = document.getElementById('pulse-acq');
