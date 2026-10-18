@@ -369,6 +369,7 @@
       stroke-width: 2;
     }
     .schem-svg .trace-opt { stroke: var(--accent); }
+    .schem-svg .trace-revise { stroke: var(--accent); }
     .schem-svg .arr-head { fill: var(--ink); }
     .schem-svg .arr-head-accent { fill: var(--accent); }
     .schem-svg .trace-label {
@@ -923,7 +924,7 @@
         </div>
         <figure class="schem" style="margin:0">
           <div class="schem-frame">
-            <svg class="schem-svg" viewBox="0 -50 1400 870" role="img" aria-label="Schematic of the company operating model: a loop of six stages, Research, Analyze, Design, Build, Deploy, and Operate, drawn inside an Owned frame. An Optimize loop circles the Operate stage, a return trace carries operating data from Operate back to Research, and a separate Acquisition plate below the frame connects only occasionally.">
+            <svg class="schem-svg" viewBox="0 -60 1400 890" role="img" aria-label="Schematic of the company operating model: a loop of eight stages, Research, Analyze, Plan, Design, Build, Test, Deploy, and Operate, drawn inside an Owned frame. An Optimize loop circles the Operate stage, a Revise loop spans Build and Test, a return trace carries operating data from Operate back to Research, and a separate Acquisition plate below the frame connects only occasionally.">
               <defs>
                 <marker id="arr" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
                   <path class="arr-head" d="M0 0 L10 5 L0 10 z" />
@@ -933,63 +934,80 @@
                 </marker>
               </defs>
 
-              <rect class="frame-rect fade-in" style="--d:.05s" x="40" y="-26" width="1320" height="732" />
-              <rect class="frame-label-bg fade-in" style="--d:.05s" x="622" y="-39" width="156" height="26" />
-              <text class="frame-label fade-in" style="--d:.05s" x="700" y="-18">OWNED</text>
+              <rect class="frame-rect fade-in" style="--d:.05s" x="124" y="-36" width="1152" height="752" />
+              <rect class="frame-label-bg fade-in" style="--d:.05s" x="622" y="-49" width="156" height="26" />
+              <text class="frame-label fade-in" style="--d:.05s" x="700" y="-28">OWNED</text>
 
-              <path class="trace" style="--d:.45s" pathLength="100" d="M772 154 L948 211" marker-end="url(#arr)" />
-              <path class="trace" style="--d:.65s" pathLength="100" d="M1020 311 L1020 369" marker-end="url(#arr)" />
-              <path class="trace" style="--d:.85s" pathLength="100" d="M948 469 L772 526" marker-end="url(#arr)" />
-              <path class="trace" style="--d:1.05s" pathLength="100" d="M628 526 L452 469" marker-end="url(#arr)" />
-              <path class="trace" style="--d:1.25s" pathLength="100" d="M380 369 L380 311" marker-end="url(#arr)" />
-              <path class="trace" style="--d:1.45s" pathLength="100" d="M380 159 C385 70 480 45 628 154" marker-end="url(#arr)" />
-              <text class="trace-label fade-in" style="--d:1.6s" x="430" y="55">OPERATING DATA</text>
+              <path class="trace" style="--d:.45s" pathLength="100" d="M774 136 L923 168" marker-end="url(#arr)" />
+              <path class="trace" style="--d:.65s" pathLength="100" d="M1044 244 L1073 280" marker-end="url(#arr)" />
+              <path class="trace" style="--d:.85s" pathLength="100" d="M1073 400 L1044 436" marker-end="url(#arr)" />
+              <path class="trace" style="--d:1.05s" pathLength="100" d="M923 512 L774 544" marker-end="url(#arr)" />
+              <path class="trace" style="--d:1.25s" pathLength="100" d="M626 544 L477 512" marker-end="url(#arr)" />
+              <path class="trace" style="--d:1.45s" pathLength="100" d="M356 436 L327 400" marker-end="url(#arr)" />
+              <path class="trace" style="--d:1.65s" pathLength="100" d="M327 280 L356 244" marker-end="url(#arr)" />
+              <path class="trace" style="--d:1.85s" pathLength="100" d="M403 108 C410 30 500 10 626 136" marker-end="url(#arr)" />
+              <text class="trace-label fade-in" style="--d:2s" x="450" y="25">OPERATING DATA</text>
 
-              <path class="trace trace-opt" style="--d:1.65s" pathLength="100" d="M329 323 A102 102 0 0 1 329 147" marker-end="url(#arr-accent)" />
-              <text class="trace-label fade-in" style="--d:1.8s" transform="rotate(-90 240 235)" x="240" y="242">OPTIMIZE</text>
+              <path class="trace trace-opt" style="--d:2.05s" pathLength="100" d="M352 272 A102 102 0 0 1 352 96" marker-end="url(#arr-accent)" />
+              <text class="trace-label fade-in" style="--d:2.2s" transform="rotate(-90 263 184)" x="263" y="191">OPTIMIZE</text>
 
-              <g class="node" style="--d:.35s" transform="translate(700 130)">
+              <path class="trace trace-revise" style="--d:2.25s" pathLength="100" d="M320 560 A420 420 0 0 1 780 600" marker-end="url(#arr-accent)" />
+              <text class="trace-label fade-in" style="--d:2.4s" x="550" y="695" text-anchor="middle">REVISE</text>
+
+              <g class="node" style="--d:.35s" transform="translate(700 120)">
                 <circle r="76" />
                 <text class="node-no" y="-8">01</text>
                 <text class="node-name" y="26">RESEARCH</text>
               </g>
-              <g class="node" style="--d:.55s" transform="translate(1020 235)">
+              <g class="node" style="--d:.55s" transform="translate(997 184)">
                 <circle r="76" />
                 <text class="node-no" y="-8">02</text>
                 <text class="node-name" y="26">ANALYZE</text>
               </g>
-              <g class="node" style="--d:.75s" transform="translate(1020 445)">
+              <g class="node" style="--d:.75s" transform="translate(1120 340)">
                 <circle r="76" />
                 <text class="node-no" y="-8">03</text>
-                <text class="node-name" y="26">DESIGN</text>
+                <text class="node-name" y="26">PLAN</text>
               </g>
-              <g class="node" style="--d:.95s" transform="translate(700 550)">
+              <g class="node" style="--d:.95s" transform="translate(997 496)">
                 <circle r="76" />
                 <text class="node-no" y="-8">04</text>
-                <text class="node-name" y="26">BUILD</text>
+                <text class="node-name" y="26">DESIGN</text>
               </g>
-              <g class="node" style="--d:1.15s" transform="translate(380 445)">
+              <g class="node" style="--d:1.15s" transform="translate(700 560)">
                 <circle r="76" />
                 <text class="node-no" y="-8">05</text>
-                <text class="node-name" y="26">DEPLOY</text>
+                <text class="node-name" y="26">BUILD</text>
               </g>
-              <g class="node" style="--d:1.35s" transform="translate(380 235)">
+              <g class="node" style="--d:1.35s" transform="translate(403 496)">
                 <circle r="76" />
                 <text class="node-no" y="-8">06</text>
+                <text class="node-name" y="26">TEST</text>
+              </g>
+              <g class="node" style="--d:1.55s" transform="translate(280 340)">
+                <circle r="76" />
+                <text class="node-no" y="-8">07</text>
+                <text class="node-name" y="26">DEPLOY</text>
+              </g>
+              <g class="node" style="--d:1.75s" transform="translate(403 184)">
+                <circle r="76" />
+                <text class="node-no" y="-8">08</text>
                 <text class="node-name" y="26">OPERATE</text>
               </g>
 
-              <path class="acq-link fade-in" id="acq-link-path" style="--d:1.9s" d="M700 706 L700 746" />
-              <g class="acq fade-in" id="acq-plate" style="--d:2s">
-                <rect x="550" y="748" width="300" height="64" rx="6" />
-                <text class="acq-name" x="700" y="787">ACQUISITION</text>
+              <path class="acq-link fade-in" id="acq-link-path" style="--d:2.45s" d="M700 716 L700 756" />
+              <g class="acq fade-in" id="acq-plate" style="--d:2.5s">
+                <rect x="550" y="758" width="300" height="64" rx="6" />
+                <text class="acq-name" x="700" y="797">ACQUISITION</text>
               </g>
 
-              <path id="pulse-path" d="M700 130 L1020 235 L1020 445 L700 550 L380 445 L380 235 C385 70 480 45 628 154" fill="none" stroke="none" />
-              <path id="opt-path" d="M329 323 A102 102 0 0 1 329 147" fill="none" stroke="none" />
-              <circle class="pulse" id="pulse-opt" r="7" cx="329" cy="323" />
-              <circle class="pulse" id="pulse-main" r="9" cx="700" cy="130" />
-              <circle class="pulse" id="pulse-acq" r="7" cx="700" cy="706" />
+              <path id="pulse-path" d="M700 120 L997 184 L1120 340 L997 496 L700 560 L403 496 L280 340 L403 184 C410 30 500 10 626 136" fill="none" stroke="none" />
+              <path id="opt-path" d="M352 272 A102 102 0 0 1 352 96" fill="none" stroke="none" />
+              <path id="revise-path" d="M320 560 A420 420 0 0 1 780 600" fill="none" stroke="none" />
+              <circle class="pulse" id="pulse-opt" r="7" cx="352" cy="272" />
+              <circle class="pulse" id="pulse-revise" r="7" cx="320" cy="560" />
+              <circle class="pulse" id="pulse-main" r="9" cx="700" cy="120" />
+              <circle class="pulse" id="pulse-acq" r="7" cx="700" cy="716" />
             </svg>
           </div>
           <figcaption class="schem-caption">
@@ -1215,7 +1233,7 @@
     var acq = document.getElementById('acq-plate');
     var acqLink = document.getElementById('acq-link-path');
     var pulseAcq = document.getElementById('pulse-acq');
-    if (!mainPath || !optPath || !pulseMain || !pulseOpt || !acq || !acqLink || !pulseAcq) return;
+    if (!mainPath || !optPath || !pulseMain || !pulseOpt || !revisePath || !pulseRevise || !acq || !acqLink || !pulseAcq) return;
     pulseAcq.style.visibility = 'hidden';
 
     var nodeEls = Array.prototype.slice.call(svg.querySelectorAll('.node'));
@@ -1226,6 +1244,7 @@
 
     var L = mainPath.getTotalLength();
     var optL = optPath.getTotalLength();
+    var reviseL = revisePath.getTotalLength();
     var nodeAt = centers.map(function (c) {
       var best = 0, bestD = Infinity, steps = 500, i, l, p, dx, dy, d;
       for (i = 0; i <= steps; i++) {
@@ -1237,7 +1256,7 @@
       return best;
     });
 
-    var MAIN_MS = 1867, OPT_MS = 407, LIT_SPAN = 34;
+    var MAIN_MS = 1867, OPT_MS = 407, REVISE_MS = 613, LIT_SPAN = 34;
     var ACQ_MS = 347, acqLen = acqLink.getTotalLength(), acqAnimStart = null;
     function randJourneys() { return 8 + Math.floor(Math.random() * 5); }
     var nextAcq = randJourneys();
@@ -1259,6 +1278,10 @@
       var po = optPath.getPointAtLength((t % OPT_MS) / OPT_MS * optL);
       pulseOpt.setAttribute('cx', po.x.toFixed(1));
       pulseOpt.setAttribute('cy', po.y.toFixed(1));
+
+      var pr = revisePath.getPointAtLength((t % REVISE_MS) / REVISE_MS * reviseL);
+      pulseRevise.setAttribute('cx', pr.x.toFixed(1));
+      pulseRevise.setAttribute('cy', pr.y.toFixed(1));
 
       nodeAt.forEach(function (nl, i) {
         var d = Math.abs(prog - nl);
