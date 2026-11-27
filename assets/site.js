@@ -1,3 +1,15 @@
+  /* Audit fix G11: hero schematic zoom toggle. */
+  (function () {
+    document.querySelectorAll('.diagram-zoom').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var wrap = document.getElementById(btn.getAttribute('aria-controls'));
+        if (!wrap) return;
+        var zoomed = wrap.classList.toggle('zoomed');
+        btn.setAttribute('aria-expanded', zoomed ? 'true' : 'false');
+        btn.textContent = zoomed ? 'Zoom out' : 'Zoom in';
+      });
+    });
+  })();
   (function () {
     var svg = document.querySelector('.schem-svg');
     if (!svg) return;
