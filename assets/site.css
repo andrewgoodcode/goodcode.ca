@@ -586,7 +586,7 @@
       border-top: 1px solid var(--line);
     }
     .faq-item:last-child { border-bottom: 1px solid var(--line); }
-    .faq-item h3 {
+    .page-body .faq-item h2, .faq-item h3 {
       margin: 0;
       font-family: var(--display);
       font-size: 1.28rem;
