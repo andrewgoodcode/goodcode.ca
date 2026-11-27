@@ -22,7 +22,7 @@ The Good Code Company Inc. is based in Toronto, Ontario, Canada. It designs, bui
 - First real anchor created November 27, 2026 on Hedera mainnet, topic 0.0.10969062, message sequence 1, consensus timestamp 1795762310.008500013.
 - Record: EN-2026-0001, event document.captured, file engagement-letter.pdf, captured 2026-10-15T21:42:18Z.
 - SHA-256 digest of the canonical envelope: 01ae732d5bf4476f8159d2a02e23c58a6f33044d0dae2d0bd8a605c057187284
-- Verify it: [HashScan topic 0.0.10969062](https://hashscan.io/mainnet/topic/0.0.10969062/messages)
+- Verify it: [HashScan topic 0.0.10969062](https://hashscan.io/mainnet/topic/0.0.10969062)
 - The anchor proves the envelope for a record existed at the consensus timestamp and has not changed since. It does not prove the contents of the file itself, only the envelope. The envelope names the file; the file contents are not on the ledger.
 - Canonicalization spec version 1.1: [canonicalization-spec.md](https://enoch.goodcode.ca/docs/canonicalization-spec.md)
 - Receipts and evidence export: [Enoch verify page](https://enoch.goodcode.ca/verify/)
