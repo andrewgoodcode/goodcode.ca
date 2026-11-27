@@ -548,7 +548,7 @@
     .discipline-list li,
     .sector-list li {
       display: grid;
-      grid-template-columns: 64px minmax(0, 1fr) auto;
+      grid-template-columns: minmax(0, 1fr);
       gap: 18px;
       align-items: baseline;
       padding: 17px 4px;
@@ -558,15 +558,6 @@
       font-weight: 500;
       line-height: 1.15;
       letter-spacing: -.01em;
-    }
-    .discipline-list .no,
-    .sector-list .no {
-      font-family: var(--mono);
-      font-size: .76rem;
-      font-weight: 500;
-      letter-spacing: .06em;
-      color: var(--annot);
-      font-feature-settings: "tnum" 1;
     }
     .discipline-list .ref,
     .sector-list .ref {
@@ -780,7 +771,7 @@
       .fact-grid { grid-template-columns: 1fr; margin-top: 40px; }
       .fact-block + .fact-block { border-left: 0; border-top: 1px solid var(--line); }
       .discipline-list li,
-      .sector-list li { grid-template-columns: 48px minmax(0, 1fr); }
+      .sector-list li { grid-template-columns: minmax(0, 1fr); }
       .discipline-list .ref,
       .sector-list .ref { display: none; }
       .faq-item { grid-template-columns: 1fr; gap: 10px; }
@@ -865,7 +856,7 @@ body.nav-open .mobile-menu { display: block; }
 /* ---------- Discipline and sector items ---------- */
 .discipline-list li,
 .sector-list li {
-  grid-template-columns: 64px minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr);
 }
 .discipline-list li div strong,
 .sector-list li div strong {
