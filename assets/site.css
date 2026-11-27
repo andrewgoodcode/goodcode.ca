@@ -832,6 +832,7 @@
       .product-card { padding: 28px 22px; }
       .product-name { font-size: 2.4rem; }
       .button { width: 100%; }
+      .nav-links .button { width: auto; }
       .footer-inner { align-items: flex-start; flex-direction: column; gap: 8px; }
     }
 
