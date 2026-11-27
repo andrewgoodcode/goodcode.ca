@@ -23,3 +23,18 @@
     });
   }
 })();
+
+/* Footer date (G37). The footer shows the current date, set at load, so
+   it never goes stale. Without JavaScript, the static date in the page
+   (the date of the last deploy) is shown instead. */
+(function () {
+  "use strict";
+  var el = document.getElementById("last-updated");
+  if (el) {
+    el.textContent = new Date().toLocaleDateString("en-US", {
+      month: "long",
+      day: "numeric",
+      year: "numeric"
+    });
+  }
+})();
