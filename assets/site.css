@@ -171,6 +171,14 @@
       background: var(--accent-soft);
       border-color: var(--accent);
     }
+    .button:disabled {
+      opacity: .55;
+      cursor: not-allowed;
+    }
+    .button:disabled:hover {
+      background: transparent;
+      border-color: var(--line-strong);
+    }
     .arrow { font-size: 1.1em; transform: translateY(-1px); }
 
     /* ---------- Hero: the drawing sheet ---------- */
