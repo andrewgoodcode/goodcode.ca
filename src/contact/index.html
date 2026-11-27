@@ -1,0 +1,63 @@
+<!--
+title: Contact | The Good Code Company Inc., Toronto
+description: Contact The Good Code Company Inc.: general enquiries, Enoch pilot discussions, consulting on our own systems, and licensing.
+canonical: https://goodcode.ca/contact/
+scripts_after: convo-form.js
+-->
+<!-- @include partials/head-start.html -->
+<!-- @include partials/head-social.html -->
+<!-- @include partials/head-css.html -->
+<!-- @include partials/head-close.html -->
+<!-- @include partials/body-open.html -->
+<!-- @include partials/header.html -->
+  <main id="main" tabindex="-1">
+    <section class="section page-section">
+      <div class="shell section-grid">
+        <p class="section-label">
+          <span class="plate-no">Contact</span>
+          <span class="section-name">Contact the company</span>
+        </p>
+        <div class="page-body">
+          <h1 class="page-title">Contact the company</h1>
+          <p class="lead">Use the form, or write to hello@goodcode.ca.</p>
+
+          <form class="contact-form" id="contact-form" data-convo data-convo-next-class="button" data-convo-kit="https://app.kit.com/forms/10249615/subscriptions" data-convo-kit-success="Thank you! Your message has been sent. We'll be in touch soon." data-convo-kit-error="Something went wrong. Please try again, or email hello@goodcode.ca directly." data-convo-success="#form-success" method="post" action="https://app.kit.com/forms/10249615/subscriptions">
+            <div class="form-field" data-question="Hi, what is your name?">
+              <label for="cf-name">Name</label>
+              <input id="cf-name" name="fields[name]" type="text" autocomplete="name" required />
+            </div>
+            <div class="form-field" data-question="What is the best email to reach you at?">
+              <label for="cf-email">Email</label>
+              <input id="cf-email" name="email_address" type="email" autocomplete="email" required />
+            </div>
+            <div class="form-field" data-question="What is this about?" data-chips="true">
+              <label for="cf-subject">Subject</label>
+              <select id="cf-subject" name="fields[subject]" required>
+                <option value="" disabled selected>Choose a topic</option>
+                <option value="general">General enquiry</option>
+                <option value="enoch-pilot">Enoch pilot discussion</option>
+                <option value="consulting">Consulting on our own systems</option>
+                <option value="licensing">Licensing</option>
+              </select>
+            </div>
+            <div class="form-field" data-question="Tell us more.">
+              <label for="cf-message">Message</label>
+              <textarea id="cf-message" name="fields[message]" required></textarea>
+            </div>
+            <p class="form-note">Your name, email address, and message are used only to reply to you. See the <a href="/privacy/">Privacy Policy</a>.</p>
+            <button class="button" type="submit">Send message</button>
+          </form>
+          <div class="form-success" id="form-success" role="status">
+            <p>Thank you! Your message has been sent. We'll be in touch soon.</p>
+          </div>
+          <h2>Pilot discussions</h2>
+          <p>Pilot discussions for Enoch are underway with our own projects, including Find Your Grants as the first pilot client once it is launched and has transactions. External pilot enquiries are welcome. A pilot covers one record type, with 4 to 8 weeks of setup and a 3 to 12 month pilot, with scope and cost agreed in writing first. Start a discussion by choosing "Enoch pilot discussion" above, or by email at <a href="mailto:enoch@goodcode.ca">enoch@goodcode.ca</a>.</p>
+          <h2>Consulting</h2>
+          <p>Consulting is available only on systems we have already built, under a separate written agreement that states scope, deliverables, price, and timeline. We do not take open-ended briefs. See the <a href="/terms/">Terms</a>, section 6.</p>
+
+        </div>
+      </div>
+    </section>
+  </main>
+<!-- @include partials/footer.html -->
+<!-- @include partials/scripts.html -->

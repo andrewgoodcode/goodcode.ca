@@ -1,0 +1,51 @@
+<!--
+title: Enoch | The Good Code Company Inc., Toronto
+description: Enoch is a tamper-evident event logging and documentation archiving system for regulated professional firms. In development, pre-launch, pilot discussions underway.
+canonical: https://goodcode.ca/enoch/
+-->
+<!-- @include partials/head-start.html -->
+<!-- @include partials/head-social.html -->
+<!-- @include partials/head-css.html -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["Product", "SoftwareApplication"],
+    "@id": "https://goodcode.ca/enoch/#product",
+    "name": "Enoch",
+    "url": "https://enoch.goodcode.ca/",
+    "description": "Enoch is a tamper-evident event logging and documentation archiving system for regulated professional firms. In development, pre-launch, pilot discussions underway.",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "creator": { "@id": "https://goodcode.ca/#organization" }
+  }
+  </script>
+<!-- @include partials/head-close.html -->
+<!-- @include partials/body-open.html -->
+<!-- @include partials/header.html -->
+  <main id="main" tabindex="-1">
+    <section class="section page-section">
+      <div class="shell section-grid">
+        <p class="section-label">
+          <span class="plate-no">Product</span>
+          <span class="section-name">Enoch</span>
+        </p>
+        <div class="page-body">
+          <h1 class="page-title">Enoch</h1>
+          <p class="lead">Tamper-evident event logging and documentation archiving for regulated professional firms.</p>
+
+          <p>Enoch is a tamper-evident event logging and documentation archiving system. Customer events and documents stay private in customer-controlled systems, while cryptographic hashes and trusted timestamps are anchored to the Hedera public network. The result is private data with public proof: records whose integrity anyone can verify without ever seeing their contents.</p>
+          <h2>Status</h2>
+          <p><strong>In development, pre-launch.</strong> Pilot discussions are underway with our own projects, including Find Your Grants as the first pilot client once it is launched and has transactions. No live pilot deployment is running yet.</p>
+          <h2>Limits</h2>
+          <p>Enoch has no certifications, no security audit, no privacy impact assessment, no court acceptance, and no regulator endorsement. Enoch does not prove that a record is true. It proves, if a record was anchored, whether that record has changed since anchoring. It does not prove completeness, and it does not replace the systems of record you already use.</p>
+          <h2>Proof, one example</h2>
+          <p>Record EN-2026-0001, file engagement-letter.pdf, captured 2026-10-15T21:42:18Z, has SHA-256 digest <code>01ae732d5bf4476f8159d2a02e23c58a6f33044d0dae2d0bd8a605c057187284</code>. That digest was recomputed from the record and matches exactly. Live anchor: the record is anchored on Hedera mainnet, topic 0.0.10969062, message sequence 1. See the anchored record on <a href="https://hashscan.io/mainnet/topic/0.0.10969062">HashScan</a>.</p>
+          <h2>Next step</h2>
+          <p>Visit the Enoch site at <a href="https://enoch.goodcode.ca/">enoch.goodcode.ca</a>, or start a pilot discussion by email at <a href="mailto:enoch@goodcode.ca">enoch@goodcode.ca</a>. A pilot is governed by a separate written pilot agreement, not by this page.</p>
+
+        </div>
+      </div>
+    </section>
+  </main>
+<!-- @include partials/footer.html -->
+<!-- @include partials/scripts.html -->
