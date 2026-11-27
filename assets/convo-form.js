@@ -89,6 +89,8 @@
       if (step.chips) {
         if (!c.value) {
           showError(step, 'Please choose one of the options.');
+          var firstChip = step.chipGroup && step.chipGroup.querySelector('.convo-chip');
+          if (firstChip) firstChip.focus();
           return false;
         }
         return true;
@@ -190,6 +192,8 @@
         control.removeAttribute('placeholder');
       }
       var err = el('p', 'convo-error');
+      err.id = 'convo-error-' + idx;
+      err.setAttribute('role', 'alert');
       err.hidden = true;
       fs.appendChild(err);
       var step = {
@@ -227,6 +231,12 @@
         });
         field.appendChild(group);
         step.chipGroup = group;
+      }
+      if (step.chips && step.chipGroup) {
+        step.chipGroup.setAttribute('aria-describedby', err.id);
+      } else if (step.control) {
+        var describedBy = step.control.getAttribute('aria-describedby');
+        step.control.setAttribute('aria-describedby', describedBy ? describedBy + ' ' + err.id : err.id);
       }
       var nav = el('div', 'convo-nav');
       if (idx > 0) {
@@ -331,6 +341,8 @@
             target.textContent = errorMsg;
             target.style.display = '';
             target.classList.add('is-visible');
+            target.setAttribute('tabindex', '-1');
+            target.focus();
           }
         });
       });
