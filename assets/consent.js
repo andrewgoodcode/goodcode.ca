@@ -77,21 +77,4 @@
     });
   }
 
-  /* Contact form: backend is a placeholder until a provider is chosen */
-  var form = document.getElementById("contact-form");
-  if (form) {
-    form.addEventListener("submit", function (event) {
-      event.preventDefault();
-      var pending = document.getElementById("form-pending");
-      var success = document.getElementById("form-success");
-      if (form.getAttribute("data-backend") !== "connected") {
-        if (pending) pending.style.display = "block";
-        if (success) success.style.display = "none";
-        return;
-      }
-      if (success) success.style.display = "block";
-      if (pending) pending.style.display = "none";
-      form.reset();
-    });
-  }
 })();

@@ -321,6 +321,7 @@
           form.hidden = true;
           if (target) {
             target.textContent = successMsg;
+            target.style.display = '';
             target.classList.add('is-visible');
             target.setAttribute('tabindex', '-1');
             target.focus();
@@ -328,6 +329,7 @@
         }).catch(function () {
           if (target) {
             target.textContent = errorMsg;
+            target.style.display = '';
             target.classList.add('is-visible');
           }
         });
