@@ -7,8 +7,8 @@ The Good Code Company Inc. is based in Toronto, Ontario, Canada. It designs, bui
 ## Identity
 
 - Legal name: The Good Code Company Inc.
-- Federal corporation number: 1833888-4
-- Ontario corporation number: 1001802749
+- Federal corporation number: [1833888-4](https://ised-isde.canada.ca/cc/lgcy/fdrlCrpDtls.html?corpId=18338884)
+- Ontario corporation number: [1001802749](https://www.ontario.ca/page/ontario-business-registry)
 - Began as an Ontario sole proprietorship on October 15, 2023. Incorporated federally and commenced activity in Ontario on October 26, 2026.
 - Location: Toronto, Ontario, Canada
 
