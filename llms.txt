@@ -1,16 +1,54 @@
 # The Good Code Company
 
-> Independent software products, built to be trusted.
+> An independent systems company based in Toronto that designs, builds, owns, and operates its own systems.
 
-The Good Code Company is a Toronto-based independent software product company.
-It designs, builds, owns, and operates its own products. It does not take
-client projects.
+The Good Code Company Inc. is based in Toronto, Ontario, Canada. It designs, builds, owns, and operates its own systems. It does not take on client work. Consulting is available only on systems it has already built, under a separate written agreement that states scope, deliverables, price, and timeline.
+
+## Identity
+
+- Legal name: The Good Code Company Inc.
+- Federal corporation number: 1833888-4
+- Ontario corporation number: 1001802749
+- Began as an Ontario sole proprietorship on October 15, 2023. Incorporated federally and commenced activity in Ontario on October 26, 2026.
+- Location: Toronto, Ontario, Canada
 
 ## Products
 
-- Enoch (https://enoch.goodcode.ca/): tamper-evident records for regulated
-  enterprises. In development.
+- [Enoch](https://enoch.goodcode.ca/): tamper-evident event logging and documentation archiving for regulated professional firms. In development, pre-launch. Pilot discussions are underway with the company's own projects. [Enoch on goodcode.ca](https://goodcode.ca/enoch/)
+- [Find Your Grants](https://findyourgrants.ca/): matches Canadian businesses with grants. In development, pre-launch, coming soon. It is the first pilot client for Enoch, once it is launched and has transactions.
+
+## Enoch live anchor
+
+- First real anchor created November 27, 2026 on Hedera mainnet, topic 0.0.10969062, message sequence 1, consensus timestamp 1795762310.008500013.
+- Record: EN-2026-0001, event document.captured, file engagement-letter.pdf, captured 2026-10-15T21:42:18Z.
+- SHA-256 digest of the canonical envelope: 01ae732d5bf4476f8159d2a02e23c58a6f33044d0dae2d0bd8a605c057187284
+- Verify it: [HashScan topic 0.0.10969062](https://hashscan.io/mainnet/topic/0.0.10969062/messages)
+- The anchor proves the envelope for a record existed at the consensus timestamp and has not changed since. It does not prove the contents of the file itself, only the envelope. The envelope names the file; the file contents are not on the ledger.
+- Canonicalization spec version 1.1: [canonicalization-spec.md](https://enoch.goodcode.ca/docs/canonicalization-spec.md)
+- Receipts and evidence export: [Enoch verify page](https://enoch.goodcode.ca/verify/)
+
+## Pilot status
+
+- Pilot discussions are underway with the company's own projects, including Find Your Grants as the first pilot client once it is launched and has transactions. No live pilot deployment is running yet.
+- A pilot covers one record type, with 4 to 8 weeks of setup and a 3 to 12 month pilot, with scope and cost agreed in writing first.
+- Enoch pricing is agreed in writing for each pilot before it starts. There is no launch date set.
+
+## Pages
+
+- [Home](https://goodcode.ca/)
+- [About](https://goodcode.ca/about/)
+- [Frequently asked questions](https://goodcode.ca/faq/)
+- [Contact](https://goodcode.ca/contact/)
+- [Enoch](https://goodcode.ca/enoch/)
+- [Privacy Policy](https://goodcode.ca/privacy/)
+- [Terms](https://goodcode.ca/terms/)
+- [Cookie Policy](https://goodcode.ca/cookies/)
+- [Accessibility Statement](https://goodcode.ca/accessibility/)
+- [Enoch site](https://enoch.goodcode.ca/)
+- [Enoch pricing](https://enoch.goodcode.ca/pricing/)
+- [Enoch pilot application](https://enoch.goodcode.ca/pilot/)
 
 ## Contact
 
-- hello@goodcode.ca
+- General: hello@goodcode.ca
+- Enoch pilot discussions: enoch@goodcode.ca
