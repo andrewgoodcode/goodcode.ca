@@ -24,6 +24,27 @@
     try { window.localStorage.setItem(KEY, value); } catch (e) { /* storage unavailable, choice lasts for this visit only */ }
   }
 
+  function deleteCookie(name) {
+    document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+    document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=" + window.location.hostname;
+    document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=." + window.location.hostname;
+  }
+
+  /* Withdrawal: a granted choice changed to denied deletes the analytics
+     cookies already set and stops further analytics calls for this visit.
+     The gtag script already loaded stays loaded, but with no cookies to
+     read and no calls reaching it, it sends nothing further. */
+  function withdrawAnalytics() {
+    gaLoaded = false;
+    deleteCookie("_ga");
+    deleteCookie("_ga_8DQG18D81S");
+    deleteCookie("_ga_G-8DQG18D81S");
+    deleteCookie("_gid");
+    if (window.gtag) {
+      window.gtag = function () { /* analytics withdrawn, calls ignored */ };
+    }
+  }
+
   function showBanner() {
     if (document.getElementById("consent-banner")) return;
     var banner = document.createElement("div");
@@ -42,6 +63,7 @@
     banner.addEventListener("click", function (event) {
       var choice = event.target && event.target.getAttribute("data-consent");
       if (!choice) return;
+      if (choice === "denied" && storedChoice() === "granted") withdrawAnalytics();
       storeChoice(choice);
       if (choice === "granted") loadGA();
       banner.remove();
