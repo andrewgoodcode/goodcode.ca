@@ -76,10 +76,12 @@
 
   function showBanner() {
     if (document.getElementById("consent-banner")) return;
+    var previousFocus = document.activeElement;
     var banner = document.createElement("div");
     banner.className = "consent-banner";
     banner.id = "consent-banner";
-    banner.setAttribute("role", "dialog");
+    banner.setAttribute("role", "region");
+    banner.setAttribute("aria-live", "polite");
     banner.setAttribute("aria-label", "Cookie consent");
     banner.innerHTML =
       '<div class="consent-inner">' +
@@ -89,6 +91,8 @@
       '<button class="button secondary" type="button" data-consent="denied">Decline</button>' +
       '</div></div>';
     document.body.appendChild(banner);
+    var firstButton = banner.querySelector("button");
+    if (firstButton) firstButton.focus();
     banner.addEventListener("click", function (event) {
       var choice = event.target && event.target.getAttribute("data-consent");
       if (!choice) return;
@@ -96,6 +100,7 @@
       storeChoice(choice);
       if (choice === "granted") loadGA();
       banner.remove();
+      if (previousFocus && document.contains(previousFocus) && previousFocus.focus) previousFocus.focus();
     });
   }
 
