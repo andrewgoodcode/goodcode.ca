@@ -15,7 +15,7 @@ The Good Code Company Inc. is based in Toronto, Ontario, Canada. It designs, bui
 ## Products
 
 - [Enoch](https://enoch.goodcode.ca/): tamper-evident event logging and documentation archiving for regulated professional firms. In development, pre-launch. Pilot discussions are underway with the company's own projects. [Enoch on goodcode.ca](https://goodcode.ca/enoch/)
-- [Find Your Grants](https://findyourgrants.ca/): matches Canadian businesses with grants. In development, pre-launch, coming soon. It is the first pilot client for Enoch, once it is launched and has transactions.
+- [Find Your Grants, Canada](https://findyourgrants.ca/): matches Canadian businesses with grants. In development, pre-launch, coming soon. It is the first pilot client for Enoch, once it is launched and has transactions.
 
 ## Enoch live anchor
 
@@ -29,7 +29,7 @@ The Good Code Company Inc. is based in Toronto, Ontario, Canada. It designs, bui
 
 ## Pilot status
 
-- Pilot discussions are underway with the company's own projects, including Find Your Grants as the first pilot client once it is launched and has transactions. No live pilot deployment is running yet.
+- Pilot discussions are underway with the company's own projects, including Find Your Grants, Canada as the first pilot client once it is launched and has transactions. No live pilot deployment is running yet.
 - A pilot covers one record type, with 4 to 8 weeks of setup and a 3 to 12 month pilot, with scope and cost agreed in writing first.
 - Enoch pricing is agreed in writing for each pilot before it starts. There is no launch date set.
 
