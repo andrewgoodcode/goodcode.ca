@@ -1,0 +1,25 @@
+name: Regenerate sitemap
+on:
+  push:
+    branches: [main]
+    paths:
+      - "**.html"
+      - "scripts/generate-sitemap.py"
+jobs:
+  sitemap:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python3 scripts/generate-sitemap.py
+      - name: Commit updated sitemap
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add sitemap.xml
+          git diff --cached --quiet || git commit -m "Regenerate sitemap.xml"
+          git push
