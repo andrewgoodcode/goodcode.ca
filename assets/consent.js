@@ -2,6 +2,7 @@
   "use strict";
   var GA_ID = "G-8DQG18D81S";
   var KEY = "gc-consent";
+  var DATE_KEY = "gc-consent-date";
   var gaLoaded = false;
 
   function loadGA() {
@@ -18,10 +19,38 @@
   }
 
   function storedChoice() {
-    try { return window.localStorage.getItem(KEY); } catch (e) { return null; }
+    try {
+      var value = window.localStorage.getItem(KEY);
+      if (!value) return null;
+      var date = window.localStorage.getItem(DATE_KEY);
+      if (!date) {
+        /* Choice stored before dates were recorded: stamp today, keep it. */
+        window.localStorage.setItem(DATE_KEY, new Date().toISOString().slice(0, 10));
+        return value;
+      }
+      var stored = Date.parse(date);
+      if (isNaN(stored) || !/^\d{4}-\d{2}-\d{2}$/.test(date)) {
+        window.localStorage.removeItem(KEY);
+        window.localStorage.removeItem(DATE_KEY);
+        return null;
+      }
+      /* 12 months, by calendar date: a choice dated 12 months ago today is
+         still valid through today; one dated earlier has expired. */
+      var cutoff = new Date();
+      cutoff.setFullYear(cutoff.getFullYear() - 1);
+      if (date < cutoff.toISOString().slice(0, 10)) {
+        window.localStorage.removeItem(KEY);
+        window.localStorage.removeItem(DATE_KEY);
+        return null;
+      }
+      return value;
+    } catch (e) { return null; }
   }
   function storeChoice(value) {
-    try { window.localStorage.setItem(KEY, value); } catch (e) { /* storage unavailable, choice lasts for this visit only */ }
+    try {
+      window.localStorage.setItem(KEY, value);
+      window.localStorage.setItem(DATE_KEY, new Date().toISOString().slice(0, 10));
+    } catch (e) { /* storage unavailable, choice lasts for this visit only */ }
   }
 
   function deleteCookie(name) {
