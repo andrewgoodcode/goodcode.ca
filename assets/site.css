@@ -144,6 +144,9 @@
       gap: 24px;
     }
     .wordmark {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
       text-decoration: none;
       font-family: var(--display);
       font-weight: 700;
