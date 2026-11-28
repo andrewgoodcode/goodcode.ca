@@ -1131,6 +1131,9 @@ body.nav-open .mobile-menu { display: block; }
   border-color: var(--accent-deep);
   color: #f3f4ee;
 }
+.convo-chip[aria-pressed="true"]::before {
+  content: "✓ ";
+}
 .convo-review-list { list-style: none; margin: 0 0 8px; padding: 0; }
 .convo-review-row {
   display: flex;
