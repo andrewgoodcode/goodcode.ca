@@ -21,6 +21,15 @@
         menu.setAttribute("hidden", "");
       }
     });
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && document.body.classList.contains("nav-open")) {
+        document.body.classList.remove("nav-open");
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.setAttribute("aria-label", "Open menu");
+        menu.setAttribute("hidden", "");
+        toggle.focus();
+      }
+    });
   }
 })();
 
