@@ -27,6 +27,11 @@ Front matter (an HTML comment at the top of each src page):
 The stylesheet version is computed from assets/site.css (first 8 of the
 md5), so a stylesheet change needs no manual version edit: rebuild and
 every page picks up the new version.
+
+The header partial is shared, so the build stamps aria-current="page"
+onto the nav link for the current page (desktop and mobile menu alike).
+Pages with no nav link (terms, privacy, cookies, accessibility, 404)
+get none; the home page marks the wordmark.
 """
 import hashlib
 import os
@@ -41,6 +46,13 @@ REQUIRED = ("title", "description", "canonical")
 OPTIONAL = ("og_description", "scripts_before", "scripts_after")
 INCLUDE_RE = re.compile(r"<!-- @include (partials/[A-Za-z0-9_.\-/]+) -->")
 PLACEHOLDER_RE = re.compile(r"\{\{[A-Z_]+\}\}")
+CURRENT_LINKS = {
+    "index.html": ("/",),
+    "enoch/index.html": ("/enoch/",),
+    "faq/index.html": ("/faq/",),
+    "contact/index.html": ("/contact/",),
+    "about/index.html": ("/about/",),
+}
 
 
 def script_tag(name):
@@ -101,6 +113,22 @@ def expand_includes(text, path):
     return out
 
 
+def mark_current_page(out, relpath):
+    """Stamp aria-current="page" onto the current page's nav links."""
+    hrefs = CURRENT_LINKS.get(relpath)
+    if not hrefs:
+        return out
+    start = out.index('<header class="site-nav">')
+    end = out.index('</header>', start)
+    head, header, tail = out[:start], out[start:end], out[end:]
+    for href in hrefs:
+        pattern = re.compile(r'(<a[^>]*href="%s")' % re.escape(href))
+        header, n = pattern.subn(r'\1 aria-current="page"', header)
+        if n == 0:
+            raise ValueError("%s: current-page link %s not found in header" % (relpath, href))
+    return head + header + tail
+
+
 def build_page(relpath, css_version):
     src_path = os.path.join(SRC, relpath)
     with open(src_path) as f:
@@ -124,6 +152,7 @@ def build_page(relpath, css_version):
     out = out.replace("{{SCRIPTS_AFTER}}\n",
                       render_scripts(values.get("scripts_after", "")) + "\n"
                       if values.get("scripts_after") else "")
+    out = mark_current_page(out, relpath)
     leftover = PLACEHOLDER_RE.search(out)
     if leftover:
         raise ValueError("%s: unsubstituted placeholder %s" % (relpath, leftover.group(0)))
