@@ -1,3 +1,24 @@
+# AI crawlers are welcome. A summary for language models is at /llms.txt.
+User-agent: GPTBot
+Allow: /
+Disallow: /src/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /src/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /src/
+
+User-agent: CCBot
+Allow: /
+Disallow: /src/
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /src/
+
 User-agent: *
 Allow: /
 Disallow: /src/
