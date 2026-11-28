@@ -41,6 +41,10 @@
     /* Progress bar, recap thread, and live status region, built by JS. */
     var progress = el('div', 'convo-progress');
     var track = el('div', 'convo-progress-track');
+    track.setAttribute('role', 'progressbar');
+    track.setAttribute('aria-valuemin', '0');
+    track.setAttribute('aria-valuemax', '100');
+    track.setAttribute('aria-valuenow', '0');
     var fill = el('span', 'convo-progress-fill');
     var progressText = el('p', 'convo-progress-text');
     track.appendChild(fill);
@@ -144,6 +148,7 @@
       current = n;
       renderThread(Math.min(n, fields.length));
       fill.style.width = Math.round((n / total) * 100) + '%';
+      track.setAttribute('aria-valuenow', String(Math.round((n / total) * 100)));
       if (n < fields.length) {
         progressText.textContent = 'Step ' + (n + 1) + ' of ' + fields.length;
         status.textContent = 'Step ' + (n + 1) + ' of ' + fields.length + ': ' + steps[n].question;
