@@ -2,7 +2,7 @@
 
 > An independent systems company based in Toronto that designs, builds, owns, and operates its own systems.
 
-The Good Code Company Inc. is based in Toronto, Ontario, Canada. It designs, builds, owns, and operates its own systems. It does not take on client work. Consulting is available only on systems it has already built, under a separate written agreement that states scope, deliverables, price, and timeline.
+The Good Code Company Inc. is based in Toronto, Ontario, Canada. It designs, builds, owns, and operates its own systems. It does not take on client work. Consulting is available only on systems it has already built.
 
 ## Identity
 
