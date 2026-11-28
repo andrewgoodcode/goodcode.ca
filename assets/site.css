@@ -79,7 +79,12 @@
     }
 
     a { color: inherit; }
-    a:focus-visible {
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    select:focus-visible,
+    textarea:focus-visible,
+    summary:focus-visible {
       outline: 3px solid var(--annot);
       outline-offset: 4px;
     }
